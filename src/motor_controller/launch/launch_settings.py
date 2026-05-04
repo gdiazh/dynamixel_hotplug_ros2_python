@@ -12,10 +12,10 @@ USB_u2d2_port_to_use = [
     f"/dev/ttyUSB{n}" # Use this line for Moonbot Zero
     for n in [
         0,
-        1,
-        2,
-        3,
-        4,
+        # 1,
+        # 2,
+        # 3,
+        # 4,
     ]
 ]
 # Use the actual port assigned to the U2D2.
@@ -24,7 +24,7 @@ USB_u2d2_port_to_use = [
 # if you have only one u2d2 plugged in, you should see it assigned to `/dev/ttyUSB0` and use `["/dev/ttyUSB{0}"]` here
 # see the doc udev_rules_doc.md to assign a fix path to a physical controller
 
-PortAliasDic = dict(zip(USB_u2d2_port_to_use, [f"port_{n}" for n in [0, 1, 2, 3, 4]]))
+PortAliasDic = dict(zip(USB_u2d2_port_to_use, [f"port_{n}" for n in [0]]))
 # The alias will replace `f"/dev/ttyUSB{n}"` as the name of the port notably when creating node name and topics
 
 MotorSeries = "X_SERIES"
@@ -37,12 +37,12 @@ MotorSeries = "X_SERIES"
 # 'P_SERIES'     # PH54, PH42, PM54
 # 'XL320'        # [WARNING] Operating Voltage : 7.4V
 
-Baudrate = 2_000_000
+Baudrate = 115_200
 # Default: 57_600, Pro series default: 1_000_000, Max: 4_000_000
 # if the baudrate is wrong motors won't be detected
 
 IdRangeMin = 1  # included
-IdRangeMax = 10  # included
+IdRangeMax = 7  # included
 # defines the id range of the motors to detect
 # two motors CANNOT share the same id, it WILL bug
 

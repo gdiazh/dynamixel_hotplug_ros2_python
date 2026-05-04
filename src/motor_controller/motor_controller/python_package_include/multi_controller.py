@@ -363,7 +363,7 @@ class MotorHandler:
         if new_motors:
             self.motor_list += new_motors
 
-            [my_motor.enable() for my_motor in new_motors]
+            # [my_motor.enable() for my_motor in new_motors]
             [my_motor.subscribe_position() for my_motor in new_motors]
             return list(motor_data_array[:, 0])
         else:

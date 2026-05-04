@@ -47,7 +47,8 @@ port_controller = [Node(
     namespace='',  # Default namespace
     executable='u2d2_dyna_controller',
     name=f'Dyna_{setting_to_use.PortAliasDic[port]}',
-    arguments=['--ros-args', '--log-level', "info"],
+    output='screen',  # <--- Add this line
+    emulate_tty=True,  # Optional: Helps with colored output and buffering
     parameters=[{
         'UsbPort': port,
         'PortAlias': setting_to_use.PortAliasDic[port],
