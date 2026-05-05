@@ -46,13 +46,13 @@ input_shaping_map = {
 
 # {Higher level sub  : Set a offset on the angles (before the gain is applied)}
 offset_map = {
-    f"ang_joint{1}_{1}_set": -0.4672,
+    f"ang_joint{1}_{1}_set": 1.1116,
     f"ang_joint{1}_{2}_set": 3.2152,
     f"ang_joint{1}_{3}_set": 2.71,
-    f"ang_joint{1}_{4}_set": 0.0130,
-    f"ang_joint{1}_{5}_set": -0.8201,
-    f"ang_joint{1}_{6}_set": 3.9701,
-    f"ang_joint{1}_{7}_set": 3.1063,
+    f"ang_joint{1}_{4}_set": -1.6271,
+    f"ang_joint{1}_{5}_set": -0.7065,
+    f"ang_joint{1}_{6}_set": -0.7035,
+    f"ang_joint{1}_{7}_set": 1.5857,
 }
 
 # {Higher level sub  : Set a gain on the angles (can be negative to flip the motor)}
